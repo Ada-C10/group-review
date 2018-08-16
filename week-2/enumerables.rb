@@ -9,6 +9,8 @@ PETS_IN_SPACE = [
 ]
 
 def average_age(pets)
+  raise ArgumentError if pets.empty?
+
   total_age = 0
   pets.each do |pet|
     total_age += pet[:age]
@@ -33,5 +35,17 @@ describe :average_age do
 
     # Assert
     expect(result).must_equal 30
+  end
+
+  it 'throws ArgumentError when given an empty array' do
+    # Arrange
+    pets = []
+
+    # Act
+
+    # Assert
+    expect {
+      average_age(pets)
+    }.must_raise ArgumentError
   end
 end
