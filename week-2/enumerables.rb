@@ -11,18 +11,7 @@ PETS_IN_SPACE = [
 def average_age(pets)
   raise ArgumentError if pets.empty?
 
-  # 1. Find the age of each pet
-  ages = pets.map do |pet|
-    pet[:age]
-  end
-
-  # 2. Total those ages
-  total_age = ages.sum
-
-  # 3. Divide the total by the number of pets
-  average_age = total_age / pets.length
-
-  return average_age
+  pets.map { |pet| pet[:age] }.sum / pets.length
 end
 
 
