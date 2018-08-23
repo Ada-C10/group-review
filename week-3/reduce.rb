@@ -59,14 +59,31 @@ golden_girls = [
   { name: "Dorothy", actor: "Bea Arthur" }
 ]
 
-def tshirt(actors)
+def char_names(actors)
   names = actors.map do |actor|
     actor[:name]
   end
+end
 
+def actor_names(actors)
+  names = actors.map do |actor|
+    actor[:actor].split.first
+  end
+end
+
+def tshirt(names)
   names.reduce do |result, name|
     result + " &\n" + name
   end
 end
 
-puts tshirt(golden_girls)
+puts tshirt(actor_names(golden_girls))
+
+
+
+
+
+
+
+
+# end
