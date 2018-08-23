@@ -51,3 +51,22 @@ end
 
 # array = ["Hello", "Ada", "Students"]
 # puts joinr(array, " ")
+
+golden_girls = [
+  { name: "Blanche", actor: "Rue McClannahan" },
+  { name: "Sophia", actor: "Estelle Getty" },
+  { name: "Rose", actor: "Betty White" },
+  { name: "Dorothy", actor: "Bea Arthur" }
+]
+
+def tshirt(actors)
+  names = actors.map do |actor|
+    actor[:name]
+  end
+
+  names.reduce do |result, name|
+    result + " &\n" + name
+  end
+end
+
+puts tshirt(golden_girls)
