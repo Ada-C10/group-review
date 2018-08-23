@@ -29,8 +29,25 @@ def countr2(array)
   array.reduce(0) { |count| count + 1 }
 end
 
+# array = [10, 4, 35, 22, 180, 8, 9]
+# puts countr2(array)
 
 
+def join(strings, seperator)
+  result = strings.first.clone
+  strings[1..-1].each do |str|
+    result << seperator
+    result << str
+  end
 
-array = [10, 4, 35, 22, 180, 8, 9]
-puts countr2(array)
+  return result
+end
+
+def joinr(strings, seperator)
+  return strings.reduce do |result, str|
+    result + seperator + str
+  end
+end
+
+# array = ["Hello", "Ada", "Students"]
+# puts joinr(array, " ")
