@@ -7,3 +7,8 @@ Topics:
 * CSV & Enumerable methods topics from last week
 
 Additional questions:
+1. Use cases for `reduce`
+2. Testing related questions  
+3. CSV - `open` vs `read`
+4. Does `main` need to be part of a class when it's in one file?
+5. Opening a file in "A+" mode
