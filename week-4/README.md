@@ -8,3 +8,5 @@ Topics:
 
 Additional questions:
 1. When to use inheritance vs modules/mix-ins?
+2. How to use associated class instances (by calling methods)?
+3. When to use class methods? -- only when we say so explicitly
