@@ -8,3 +8,6 @@ Topics:
 * Developer tools
 
 Additional questions:
+1. Difference between flexbox & grid - when to use
+2. Nesting of flexbox and grid elements?
+3. CSS inheritance - syntax
