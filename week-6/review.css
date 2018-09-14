@@ -1,0 +1,45 @@
+/* Some styles in here */
+.profiles {
+  display: flex;
+}
+
+.profile {
+  border: 1px solid black;
+  margin-left: 1em;
+  padding: 0.5em;
+  display: grid;
+  width: 350px;
+  height: 400px;
+}
+
+.profile.favorited {
+  order: -1;
+}
+
+.name {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+
+.tagline {
+    grid-row: 4 / span 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    font-size: 1.em;
+}
+
+.date-added {
+    grid-column-start: 4;
+    grid-column-end: span 1;
+    grid-row-start: 6;
+    grid-row-end: span 1;
+    text-align: right;
+}
+
+.favorite {
+    grid-column-start: 4;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    text-align: right;
+}
