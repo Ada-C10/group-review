@@ -1,0 +1,11 @@
+<h1>WELCOME TO WEBSITE</h1>
+
+<%= form_with url: 'https://www.google.com/search', method: :get, local: true do |f| %>
+  <%= f.label :search %>
+  <%= f.text_field :q, placeholder: "Search Google today!" %>
+
+  <%= f.submit "Search" %>
+<% end %>
+
+
+<%= link_to 'Stuff', {controller: 'welcome', action: 'stuff'} %>
