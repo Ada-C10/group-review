@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :cakes, only: [:index] do
     post 'assign'
   end
+
+  resources :chefs, only: [:new, :create]
 end
