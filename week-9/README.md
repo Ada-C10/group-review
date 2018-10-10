@@ -10,3 +10,6 @@ Topics:
 * Git branches
 
 Additional questions:
+1. When to use nested routes?
+2. How do you know if the nesting is too much?
+3. Responsibilities - M V or C
