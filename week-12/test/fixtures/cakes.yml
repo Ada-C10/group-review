@@ -2,3 +2,7 @@ basic:
   size: small
   pickup: <%= Date.tomorrow.noon %>
   chef: victoria
+
+unassigned:
+  size: small
+  pickup: <%= Date.tomorrow.noon %>

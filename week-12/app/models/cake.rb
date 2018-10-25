@@ -8,6 +8,10 @@ class Cake < ApplicationRecord
 
   validate :pickup_must_be_in_future
 
+  def assigned?
+    chef.present?
+  end
+
   private
 
   def pickup_must_be_in_future

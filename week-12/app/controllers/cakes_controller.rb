@@ -23,8 +23,13 @@ class CakesController < ApplicationController
 
     return head :not_found unless cake && chef
 
-    chef.assign!(cake)
-    redirect_to cakes_path
+    begin
+      chef.assign!(cake)
+      redirect_to cakes_path
+    rescue RuntimeError
+      @cakes = Cake.all.order(pickup: :desc)
+      render :index, status: :bad_request
+    end
   end
 
   private
