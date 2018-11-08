@@ -1,0 +1,17 @@
+<h1>Order a Cake</h1>
+
+<%= form_with model: @cake do |f| %>
+  <%= f.label :size %>
+  <%= f.collection_select :size, Cake::SIZES, :itself, :itself %>
+
+  <%= f.label :pickup %>
+  <%= f.datetime_select :pickup %>
+
+  <%= f.label :message %>
+  <%= f.text_field :message %>
+
+  <%= f.label :notes %>
+  <%= f.text_field :notes, placeholder: "Optional" %>
+
+  <%= f.submit %>
+<% end %>
