@@ -1,6 +1,11 @@
 class CakesController < ApplicationController
   def index
-    @cakes = Cake.all.order(pickup: :desc)
+    sort = :pickup # The Cake model attribute to sort by
+    if params[:sort].present?
+      sort = params[:sort].to_sym
+    end
+
+    @cakes = Cake.all.order(sort => :asc)
   end
 
   def new
