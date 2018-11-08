@@ -1,6 +1,8 @@
 class CakesController < ApplicationController
   SORTABLE_ATTRIBUTES = [:size, :message, :pickup, :notes]
 
+  PAGE_SIZE = 2
+
   def index
     @cakes = Cake.all
 
@@ -8,8 +10,11 @@ class CakesController < ApplicationController
       @cakes = @cakes.order(params[:sort].to_sym => :asc)
     end
 
-    # More code here
-    @cakes = @cakes.limit(2)
+    @cakes = @cakes.limit(PAGE_SIZE)
+
+    if params[:page].present?
+      @cakes = @cakes.offset((params[:page].to_i - 1) * PAGE_SIZE)
+    end
   end
 
   def new
