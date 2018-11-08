@@ -1,11 +1,15 @@
 class CakesController < ApplicationController
+  SORTABLE_ATTRIBUTES = [:size, :message, :pickup, :notes]
+
   def index
-    sort = :pickup # The Cake model attribute to sort by
-    if params[:sort].present?
-      sort = params[:sort].to_sym
+    @cakes = Cake.all
+
+    if params[:sort].present? && SORTABLE_ATTRIBUTES.include?(params[:sort].to_sym)
+      @cakes = @cakes.order(params[:sort].to_sym => :asc)
     end
 
-    @cakes = Cake.all.order(sort => :asc)
+    # More code here
+    @cakes = @cakes.limit(2)
   end
 
   def new
