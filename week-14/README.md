@@ -11,3 +11,5 @@ Topics:
 
 Additional questions:
 1. How do we support additional query string parameters?
+2. How to design your API routes?
+3. What pieces are necessary for API servers vs API consumers?
