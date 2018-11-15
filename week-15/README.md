@@ -14,3 +14,5 @@ Additional questions:
 4. `const` vs `let`
 5. `==` vs `===`, `!` and `!!`
 6. Debugging???
+7. Prototypes???
+8. Equivalent or Ruby helper methods
