@@ -29,3 +29,19 @@ $(document).ready(() => {
 
     // 2
 });
+
+$(document).ready(() => {
+  $('#form-submit').click(() => {
+
+    const newPet = {
+      name: $('input#form-name').val(),
+      breed: $('input#form-breed').val(),
+      age: $('input#form-age').val(),
+    };
+
+    axios.post(URL, newPet)
+      .then((response) => {
+        console.log(response);
+      });
+  });
+});
