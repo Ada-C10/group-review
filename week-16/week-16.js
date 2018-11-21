@@ -6,13 +6,10 @@ $(document).ready(() => {
   axios.get(URL)
     .then((response) => {
       response.data.slice(0, 10).forEach((pet) => {
-        const $petItem = $(`<li id="pet-${pet.id}">${pet.name}</li>`);
+        const $petItem = $(`<li>${pet.name}</li>`);
 
-        $petItem.click((event) => {
-          const petId = event.target.id.split('-')[1];
-          //console.log(petId);
-
-          axios.get(URL + '/' + petId)
+        $petItem.click(() => {
+          axios.get(URL + '/' + pet.id)
             .then((response) => {
               const pet = response.data;
 
